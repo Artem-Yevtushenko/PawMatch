@@ -1,20 +1,37 @@
 import React from 'react';
-import {ChooseBreed} from "./ChooseBreed";
+import {ChooseBreed} from "./Components/ChooseBreed/ChooseBreed";
 import {useState} from "react";
-import {DogList} from "./DogList";
+import {DogList} from "./Components/DogList/DogList";
+import "./App.css"
 
 function App() {
     const [filter, setFilter] = useState<string[]>([]);
   return (
-    <div className="App">
-    <ChooseBreed
-        filters={filter}
-        setFilters={setFilter}
-    />
-        <DogList
-        filters={filter}
-        />
-    </div>
+      <div className="App">
+          <header className="header">
+              <div className="logo">Paw<span>Match</span></div>
+              <button>GitHub</button>
+          </header>
+
+          <main className="main-container">
+
+              <div className="filters-section">
+                  <h1 className="title">Find your <br/>perfect match</h1>
+                  <p className="subtitle">Choose qualities that are important to you:</p>
+
+                  <div className="features-grid">
+                      <ChooseBreed filters={filter} setFilters={setFilter}/>
+                  </div>
+              </div>
+
+              <div className="results-section">
+                  <div className="placeholder-text">
+                        A photo of your dog will appear here 🐶
+                      <DogList filters={filter}/>
+                  </div>
+              </div>
+          </main>
+      </div>
   );
 }
 

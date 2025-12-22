@@ -1,4 +1,4 @@
-import {DataBase} from "./DataBase";
+import {DataBase} from "../../DataBase";
 
 interface DogProps{
     filters: string[];
