@@ -1,7 +1,8 @@
 import React from 'react';
 import {ChooseBreed} from "./Components/ChooseBreed/ChooseBreed";
 import {useState} from "react";
-import {DogList} from "./Components/DogList/DogList";
+import {PetList} from "./Components/PetList/PetList";
+import PetCard from "./Components/PetCard/PetCard";
 import "./App.css"
 
 function App() {
@@ -26,8 +27,8 @@ function App() {
 
               <div className="results-section">
                   <div className="placeholder-text">
-                        A photo of your dog will appear here 🐶
-                      <DogList filters={filter}/>
+                        <PetCard/>
+                      <PetList filters={filter}/>
                   </div>
               </div>
           </main>

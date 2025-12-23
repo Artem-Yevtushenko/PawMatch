@@ -1,10 +1,10 @@
 import {DataBase} from "../../DataBase";
 
-interface DogProps{
+interface PetProps{
     filters: string[];
 }
 
-export function DogList(props: DogProps){
+export function PetList(props: PetProps){
     const data = new DataBase();
     const filters = props.filters;
     const visibleDogs =  data.dogs.filter(dog =>
