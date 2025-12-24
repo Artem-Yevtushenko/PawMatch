@@ -7,7 +7,6 @@ interface Props {
     setFilters: (filters: string[]) => void
 }
 export function ChooseBreed(props: Props) {
-    const [existed, setExisted] = useState<boolean>(false);
 
     const uniqueFeatures = useMemo(() => {
        const data = new DataBase();

@@ -27,8 +27,7 @@ function App() {
 
               <div className="results-section">
                   <div className="placeholder-text">
-                        <PetCard/>
-                      <PetList filters={filter}/>
+                        <PetCard filters={filter}/>
                   </div>
               </div>
           </main>
