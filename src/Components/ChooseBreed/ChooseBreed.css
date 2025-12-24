@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainChoose{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.button {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--text-main);
+    padding: 8px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    background-color: #fff5e6;
+    transform: translateY(-2px);
+}
+
+.button.active {
+    background-color: var(--primary);
+    color: white;
+}
