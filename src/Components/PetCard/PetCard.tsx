@@ -16,8 +16,8 @@ function PetCard(props: PetProps) {
     return (
         <div className="card">
             {filters.length === 0 ?(
-                <div>
-                    <div className="image">
+                <div className="placeholder">
+                    <div className="placeholder-image">
                         🐶
                     </div>
                     <h2>Waiting for your choice...</h2>
@@ -26,16 +26,29 @@ function PetCard(props: PetProps) {
                 ) : (
                     <div>
                         {visibleDogs.length > 0 ? (
-                            visibleDogs.map(dog =>
-                                <div key={dog.breed}>{dog.breed}</div>)
+                            <div className="dog-grid">
+                                {visibleDogs.map(dog =>(
+                                    <div key={dog.breed} className="dog-card">
+                                        <div className="dog-avatar">
+                                            🐕
+                                        </div>
+                                        <div className="dog-name">
+                                            {dog.breed}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         ) : (
-                            <p>No dogs match these criteria</p>
+                            <div className="placeholder">
+                                <h2>No dogs found</h2>
+                                <p>Try removing some filters to broaden your search.</p>
+                            </div>
                         )}
                     </div>
                 )
             }
         </div>
     );
-};
+}
 
 export default PetCard;

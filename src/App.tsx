@@ -1,7 +1,6 @@
 import React from 'react';
 import {ChooseBreed} from "./Components/ChooseBreed/ChooseBreed";
 import {useState} from "react";
-import {PetList} from "./Components/PetList/PetList";
 import PetCard from "./Components/PetCard/PetCard";
 import "./App.css"
 
